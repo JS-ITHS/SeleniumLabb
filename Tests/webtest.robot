@@ -20,7 +20,7 @@ User Can Create New User
     [Documentation]  Testing that user has to fill out all fields to create a new user.
     [Tags]  create user
     Go To Create User
-    Enter Account Information
+    Create User With Missing Field
 
 
 

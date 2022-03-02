@@ -15,6 +15,10 @@ Go To Create User
     Verify Create User Loaded
 Verify Create User Loaded
     Wait Until Page Contains  Create a new user
+Create User With Missing Field
+    Enter Account Information
+    Press Create User
+    Verify PopUp Alert
 Enter Account Information
     Enter First Name
     Enter Last Name
@@ -34,6 +38,13 @@ Enter Confirm Mail
     Input Text  //*[@id="confirmEmail"]  ${MAIL}
 Enter Password
     Input Text  //*[@id="passwordCreate"]  ${PASSWORD}
+Press Create User
+    Click Button  //*[@id="create"]
+Verify PopUp Alert
+    Sleep  3s
+    Wait Until Page Contains Element  //*[@id="userInfoTopBottom"]/comment()
 End Web Test
     Close Browser
+
+
 
