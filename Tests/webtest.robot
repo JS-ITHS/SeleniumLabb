@@ -16,11 +16,18 @@ ${MAIL}  hiroshi.teshigahara789@gmail.com
 ${PASSWORD}  secret666
 
 *** Test Cases ***
-User Can Create New User
-    [Documentation]  Testing that user has to fill out all fields to create a new user.
-    [Tags]  create user
+#User Has To Fill Out All Fields To Create User
+#    [Documentation]  Testing that user has to fill out all fields to create a new user.
+#    [Tags]  krav-1
+#    Go To Create User
+#    Create User With Missing Field
+
+User Can Cancel Creating a User
+    [Documentation]  Testing that user can cancel creating a user.
+    [Tags]  krav-2
     Go To Create User
     Create User With Missing Field
+    Cancel Creating User
 
 
 

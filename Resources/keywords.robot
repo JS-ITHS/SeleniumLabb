@@ -18,7 +18,8 @@ Verify Create User Loaded
 Create User With Missing Field
     Enter Account Information
     Press Create User
-    Verify PopUp Alert
+Create User
+
 Enter Account Information
     Enter First Name
     Enter Last Name
@@ -40,9 +41,11 @@ Enter Password
     Input Text  //*[@id="passwordCreate"]  ${PASSWORD}
 Press Create User
     Click Button  //*[@id="create"]
-Verify PopUp Alert
-    Sleep  3s
-    Wait Until Page Contains Element  //*[@id="userInfoTopBottom"]/comment()
+Cancel Creating User
+    Click Button  //*[@id="cancel"]
+    Verify Cancel Creating User Loaded
+Verify Cancel Creating User Loaded
+    Wait Until Page Contains  When do you want to make your trip?
 End Web Test
     Close Browser
 
