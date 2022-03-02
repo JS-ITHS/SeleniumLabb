@@ -16,11 +16,17 @@ Go To Create User
 Verify Create User Loaded
     Wait Until Page Contains  Create a new user
 Create User With Missing Field
-    Enter Account Information
+    Enter Create Account Information
     Press Create User
 Create User
-
+Sign Into User
+    Enter Account Information
+    Click Button  //*[@id="login"]
+    Wait Until Page Contains  Logout
 Enter Account Information
+    Input Text  //*[@id="email"]  ${MAIL}
+    Input Password  //*[@id="password"]  ${PASSWORD}
+Enter Create Account Information
     Enter First Name
     Enter Last Name
     Enter Phone Number

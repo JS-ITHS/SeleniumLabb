@@ -13,7 +13,7 @@ ${FIRST_NAME}  Hiroshi
 ${LAST_NAME}  Teshigahara
 ${PHONE_NUMBER}  1324354657
 ${MAIL}  hiroshi.teshigahara789@gmail.com
-${PASSWORD}  secret666
+${PASSWORD}  secret
 
 *** Test Cases ***
 #User Has To Fill Out All Fields To Create User
@@ -26,8 +26,13 @@ User Can Cancel Creating a User
     [Documentation]  Testing that user can cancel creating a user.
     [Tags]  krav-2
     Go To Create User
-    Create User With Missing Field
     Cancel Creating User
+
+User Can Book A Car
+    [Documentation]  Testing that a user can book a car.
+    [Tags]  VG_test
+    Sign Into User
+
 
 
 
