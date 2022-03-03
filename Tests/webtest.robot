@@ -32,7 +32,9 @@ User Can Book A Car
     [Documentation]  Testing that a user can book a car.
     [Tags]  VG_test
     Sign Into User
-
+    Go To Car Rental
+    Select Car
+    Confirm Booking Car
 
 
 
