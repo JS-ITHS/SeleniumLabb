@@ -15,17 +15,17 @@ Go To Create User
     Verify Create User Loaded
 Verify Create User Loaded
     Wait Until Page Contains  Create a new user
-Create User With Missing Field
-    Enter Create Account Information
-    Press Create User
-Sign Into User
+Sign Into User Account
     Enter Account Information
     Click Button  //*[@id="login"]
     Wait Until Page Contains  Logout
-Go To Car Rental
+Enter Account Information
+    Input Text  //*[@id="email"]  ${MAIL}
+    Input Password  //*[@id="password"]  ${PASSWORD}
+Go To Car Rental Page
     Click Button  //*[@id="continue"]
     Wait Until Page Contains  What would you like to drive?
-Select Car
+User Books A Car
     Scroll Element Into View  //*[@id="carTable"]/tbody/tr[16]/td[1]
     Wait Until Page Contains  Model S
     Click Button  //*[@id="bookModelSpass5"]
@@ -42,14 +42,13 @@ Enter Payment Information
     Input Text  //*[@id="cvc"]  000
     Select From List By Index  //*[@id="confirmSelection"]/form/select[1]  6
     Select From List By Index  //*[@id="confirmSelection"]/form/select[2]  6
+    Press Confirm To Book Car
 Press Confirm To Book Car
     Click Button  //*[@id="confirm"]
-    Verify Booking Car
-Verify Booking Car
     Wait Until Page Contains  A Tesla Model S is now ready for pickup
-Enter Account Information
-    Input Text  //*[@id="email"]  ${MAIL}
-    Input Password  //*[@id="password"]  ${PASSWORD}
+User Gets Confirmation The Car Is Booked
+    Wait Until Page Contains  A Tesla Model S is now ready for pickup
+    Wait Until Page Contains  You can view your booking on your page
 Enter Create Account Information
     Enter First Name
     Enter Last Name
@@ -76,7 +75,7 @@ Cancel Creating User
     Verify Cancel Creating User Loaded
 Verify Cancel Creating User Loaded
     Wait Until Page Contains  When do you want to make your trip?
-Confirm Back To Home Page
+User Is At Date Selection
     Click Element  //*[@id="title"]
     Wait Until Page Contains  When do you want to make your trip?
 End Web Test

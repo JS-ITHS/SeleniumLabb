@@ -25,27 +25,17 @@ User Can Cancel Creating a User
 User Need To Be Signed In To Book A Car
     [Documentation]  Testing that an alert box will appear if user is not signed in when booking car.
     [Tags]  G_krav_2
-    Go To Car Rental
+    Go To Car Rental Page
     Select Car Not Signed In
     Verify Alert Box Appears
-    Confirm Back To Home Page
+    User Is At Date Selection
 
 User Can Book A Car
     [Documentation]  Testing that a user can book a car.
     [Tags]  VG_test
-    Given User is at Date Selection
+    Given User Is At Date Selection
     And Sign Into User Account
-    And Selects A Date
-    And Go To The Car Selection Page
-    When User Presses Book Next To A Car
-    And Enters Payment Information
-    And Confirms
-    Sign Into User
-    Go To Car Rental
-    Select Car
-    Confirm Booking Car
-    Press Confirm To Book Car
-
-
-
-
+    And Go To Car Rental Page
+    When User Books A Car
+    And Enter Payment Information
+    Then User Gets Confirmation The Car Is Booked
