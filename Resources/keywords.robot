@@ -49,27 +49,6 @@ Press Confirm To Book Car
 User Gets Confirmation The Car Is Booked
     Wait Until Page Contains  A Tesla Model S is now ready for pickup
     Wait Until Page Contains  You can view your booking on your page
-Enter Create Account Information
-    Enter First Name
-    Enter Last Name
-    Enter Phone Number
-    Enter Mail
-    Enter Confirm Mail
-    Enter Password
-Enter First Name
-    Input Text  //*[@id="name"]  ${FIRST_NAME}
-Enter Last Name
-    Input Text  //*[@id="last"]  ${LAST_NAME}
-Enter Phone Number
-    Input Text  //*[@id="phone"]  ${PHONE_NUMBER}
-Enter Mail
-    Input Text  //*[@id="emailCreate"]  ${MAIL}
-Enter Confirm Mail
-    Input Text  //*[@id="confirmEmail"]  ${MAIL}
-Enter Password
-    Input Text  //*[@id="passwordCreate"]  ${PASSWORD}
-Press Create User
-    Click Button  //*[@id="create"]
 Cancel Creating User
     Click Button  //*[@id="cancel"]
     Verify Cancel Creating User Loaded

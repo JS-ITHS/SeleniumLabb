@@ -9,9 +9,6 @@ Suite Teardown  End Web Test
 *** Variables ***
 ${BROWSER}  chrome
 ${URL}  http://rental3.infotiv.net/
-${FIRST_NAME}  Hiroshi
-${LAST_NAME}  Teshigahara
-${PHONE_NUMBER}  1324354657
 ${MAIL}  hiroshi.teshigahara789@gmail.com
 ${PASSWORD}  secret
 
@@ -21,7 +18,7 @@ User Can Cancel Creating a User
     [Tags]  G_krav_1
     Go To Create User
     Cancel Creating User
-
+    User Is At Date Selection
 User Need To Be Signed In To Book A Car
     [Documentation]  Testing that an alert box will appear if user is not signed in when booking car.
     [Tags]  G_krav_2
