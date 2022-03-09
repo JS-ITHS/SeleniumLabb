@@ -24,9 +24,17 @@ ${PASSWORD}  secret
 
 User Can Cancel Creating a User
     [Documentation]  Testing that user can cancel creating a user.
-    [Tags]  krav-2
+    [Tags]  krav-1
     Go To Create User
     Cancel Creating User
+
+User Need To Be Signed In To Book A Car
+    [Documentation]  Testing that an alert box will appear if user is not signed in when booking car.
+    [Tags]  krav-2
+    Go To Car Rental
+    Select Car Not Signed In
+    Verify Alert Box Appears
+    Confirm Back To Home Page
 
 User Can Book A Car
     [Documentation]  Testing that a user can book a car.
@@ -35,6 +43,7 @@ User Can Book A Car
     Go To Car Rental
     Select Car
     Confirm Booking Car
+    Press Confirm To Book Car
 
 
 

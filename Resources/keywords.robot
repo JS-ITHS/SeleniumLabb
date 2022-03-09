@@ -18,7 +18,6 @@ Verify Create User Loaded
 Create User With Missing Field
     Enter Create Account Information
     Press Create User
-Create User
 Sign Into User
     Enter Account Information
     Click Button  //*[@id="login"]
@@ -31,6 +30,10 @@ Select Car
     Wait Until Page Contains  Model S
     Click Button  //*[@id="bookModelSpass5"]
     Wait Until Page Contains  Confirm booking of Tesla Model S
+Select Car Not Signed In
+    Click Button  //*[@id="bookQ7pass5"]
+Verify Alert Box Appears
+    Alert Should Be Present
 Confirm Booking Car
     Enter Payment Information
 Enter Payment Information
@@ -39,7 +42,11 @@ Enter Payment Information
     Input Text  //*[@id="cvc"]  000
     Select From List By Index  //*[@id="confirmSelection"]/form/select[1]  6
     Select From List By Index  //*[@id="confirmSelection"]/form/select[2]  6
-Press Confirm To
+Press Confirm To Book Car
+    Click Button  //*[@id="confirm"]
+    Verify Booking Car
+Verify Booking Car
+    Wait Until Page Contains  A Tesla Model S is now ready for pickup
 Enter Account Information
     Input Text  //*[@id="email"]  ${MAIL}
     Input Password  //*[@id="password"]  ${PASSWORD}
@@ -68,6 +75,9 @@ Cancel Creating User
     Click Button  //*[@id="cancel"]
     Verify Cancel Creating User Loaded
 Verify Cancel Creating User Loaded
+    Wait Until Page Contains  When do you want to make your trip?
+Confirm Back To Home Page
+    Click Element  //*[@id="title"]
     Wait Until Page Contains  When do you want to make your trip?
 End Web Test
     Close Browser
