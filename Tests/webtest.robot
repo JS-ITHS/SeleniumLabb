@@ -18,13 +18,13 @@ ${PASSWORD}  secret
 *** Test Cases ***
 User Can Cancel Creating a User
     [Documentation]  Testing that user can cancel creating a user.
-    [Tags]  krav-1
+    [Tags]  G_krav_1
     Go To Create User
     Cancel Creating User
 
 User Need To Be Signed In To Book A Car
     [Documentation]  Testing that an alert box will appear if user is not signed in when booking car.
-    [Tags]  krav-2
+    [Tags]  G_krav_2
     Go To Car Rental
     Select Car Not Signed In
     Verify Alert Box Appears
